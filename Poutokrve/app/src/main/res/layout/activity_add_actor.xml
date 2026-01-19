@@ -55,12 +55,24 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jméno dabéra"
+            android:layout_marginBottom="4dp" />
+
         <EditText
             android:id="@+id/editTextFirstName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Jméno"
             android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Příjmení dabéra"
+            android:layout_marginBottom="4dp" />
 
         <EditText
             android:id="@+id/editTextLastName"
@@ -69,25 +81,37 @@
             android:hint="Příjmení"
             android:layout_marginBottom="12dp" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Název postavy"
+            android:layout_marginBottom="4dp" />
+
         <EditText
             android:id="@+id/editTextCharacterName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Název postavy"
-            android:layout_marginBottom="12dp" />
+            android:layout_marginBottom="16dp" />
 
         <TextView
             android:id="@+id/tvLocationLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Vyberte lokaci"
-            android:layout_marginBottom="4dp" />
+            android:text="Lokace ve hře"
+            android:layout_marginBottom="8dp" />
 
         <Spinner
             android:id="@+id/spinnerLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp" />
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Popis postavy"
+            android:layout_marginBottom="4dp" />
 
         <EditText
             android:id="@+id/editTextDescription"
