@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/back"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp">
@@ -19,7 +20,7 @@
             android:id="@+id/btnAddActor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#00897B"
+            android:backgroundTint="#8B0000"
             android:textColor="@android:color/white"
             android:text="Přidat postavu" />
 
@@ -28,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Zobrazit seznam postav"
-            android:backgroundTint="#00897B"
+            android:backgroundTint="#8B0000"
             android:textColor="@android:color/white"
             android:layout_marginTop="16dp" />
 
