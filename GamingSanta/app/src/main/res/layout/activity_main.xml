@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <!-- Tenhle blok drží nadpis, START a výsledek pohromadě uprostřed. -->
+    <LinearLayout
+        android:id="@+id/layoutCenter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Obal pro bílé zaoblené pole s výsledkem. -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardGame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp">
+
+            <!-- Text uvnitř karty, kam se vypíše vylosovaná hra. -->
+            <TextView
+                android:id="@+id/textViewGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:minHeight="96dp"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="#00897B" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Letos o svátcích budu hrát:"
+                android:textSize="16sp"
+                android:gravity="center_horizontal"
+                android:minHeight="96dp"
+                android:padding="16dp"
+                android:textColor="#00897B" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <!-- START je přesně uprostřed bloku. -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRoll"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:text="🎲"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="48sp"
+        app:backgroundTint="#00897B"
+        app:cornerRadius="96dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="10dp"
+        android:translationZ="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
