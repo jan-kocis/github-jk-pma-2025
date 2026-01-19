@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewItem"
+            android:layout_width="72dp"
+            android:layout_height="0dp"
+            android:background="@android:color/darker_gray"
+            android:contentDescription="Obrázek dabéra"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintDimensionRatio="1:1" />
+
+        <ImageButton
+            android:id="@+id/btnEditCircle"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/circle_edit"
+            android:contentDescription="Upravit"
+            android:src="@drawable/rounded_edit_24"
+            android:scaleType="center"
+            android:tint="@android:color/white"
+            android:padding="6dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnDeleteCircle"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/circle_delete"
+            android:contentDescription="Smazat"
+            android:src="@drawable/rounded_delete_24"
+            android:scaleType="center"
+            android:tint="@android:color/white"
+            android:padding="6dp"
+            app:layout_constraintTop_toBottomOf="@id/btnEditCircle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewItem" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:text="Jméno Příjmení"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="@id/imageViewItem"
+            app:layout_constraintStart_toEndOf="@id/imageViewItem"
+            app:layout_constraintEnd_toStartOf="@id/btnEditCircle" />
+
+        <TextView
+            android:id="@+id/textViewCharacter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="4dp"
+            android:text="Postava"
+            app:layout_constraintTop_toBottomOf="@id/textViewName"
+            app:layout_constraintStart_toEndOf="@id/imageViewItem"
+            app:layout_constraintEnd_toStartOf="@id/btnEditCircle" />
+
+        <TextView
+            android:id="@+id/textViewLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="4dp"
+            android:text="Lokace"
+            app:layout_constraintTop_toBottomOf="@id/textViewCharacter"
+            app:layout_constraintStart_toEndOf="@id/imageViewItem"
+            app:layout_constraintEnd_toStartOf="@id/btnEditCircle"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewItem" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Popisek pod "kartou" přes celou šířku -->
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:text="Popis..." />
+
+</LinearLayout>

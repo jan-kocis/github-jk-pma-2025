@@ -1,0 +1,8 @@
+<resources>
+    <string-array name="locations">
+        <item>panství Black Mirror</item>
+        <item>Edinburgh a okolí</item>
+        <item>Tajemné močály</item>
+        <item>vesnice Willow Creek</item>
+    </string-array>
+</resources>
