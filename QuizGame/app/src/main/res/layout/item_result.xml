@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <!-- Řádek nahoře drží jméno a delete tlačítko vedle sebe. -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Jméno hráče se zobrazuje vlevo nahoře. -->
+        <TextView
+            android:id="@+id/textViewPlayer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Hráč: -"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnDeleteCircle" />
+
+        <!-- Kulaté tlačítko smaže tento výsledek. -->
+        <View
+            android:id="@+id/deleteCircleBg"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/circle_red"
+            app:layout_constraintTop_toTopOf="@id/btnDeleteCircle"
+            app:layout_constraintBottom_toBottomOf="@id/btnDeleteCircle"
+            app:layout_constraintStart_toStartOf="@id/btnDeleteCircle"
+            app:layout_constraintEnd_toEndOf="@id/btnDeleteCircle" />
+
+        <ImageButton
+            android:id="@+id/btnDeleteCircle"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Smazat výsledek"
+            android:padding="8dp"
+            android:scaleType="center"
+            android:src="@drawable/rounded_delete_24"
+            android:tint="@android:color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Skóre se zobrazuje pod jménem. -->
+        <TextView
+            android:id="@+id/textViewScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Skóre: -"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/textViewPlayer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Datum se zobrazuje dole v kartě. -->
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Datum: -"
+            android:textSize="14sp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@id/textViewScore"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
